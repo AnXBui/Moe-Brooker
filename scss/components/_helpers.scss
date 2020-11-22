@@ -1,0 +1,255 @@
+/* =============
+    Helpers
+============= */
+
+
+.p10{
+  padding: 1rem;
+}
+
+.p20{
+  padding: 2rem;
+}
+
+.pb10{
+  padding-bottom: 1rem;
+}
+
+.pb60{
+  padding-bottom: 6rem;
+}
+
+.mb10{
+  margin-bottom: 1rem;
+}
+
+.mt10{
+  margin-top: 1rem;
+}
+
+.mb20{
+  margin-bottom: 2rem;
+}
+
+.mb30{
+  margin-bottom: 3rem;
+}
+
+.mb40{
+  margin-bottom: 4rem;
+}
+
+.relp{
+  position: relative;
+}
+
+.heading{
+  font-size: clamp(1.5rem,7.5vmax,13vmin);
+  line-height: 95%;
+
+  @include lg{
+    font-size: clamp(1.5rem, 6vmax, 10vmin);
+  }
+}
+
+.heading2{
+  font-size: clamp(1.5rem,2.5vmax,5vmin);
+  line-height: 100%;
+}
+
+
+
+p{
+  line-height: 150%;
+  max-width: 40ch;
+
+  @include md{
+    font-size: 1.1rem;
+  }
+
+  @include lg{
+    font-size: 1.3rem;
+  }
+}
+
+
+
+
+.linkExt{
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.bordBot{
+  border-bottom: var(--border-wght) solid var(--text-color);
+}
+
+.bordBotMob{
+  border-bottom: var(--border-wght) solid var(--text-color);
+
+  @include lg{
+    border-bottom: 0;
+  }
+}
+
+.clrdark{
+  --bg-color: black;
+  --text-color: white;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.sectionh{
+  padding: 0 2rem;
+
+  @include md{
+    padding: 0 10%;
+  }
+}
+
+.sectionp{
+  padding: 4rem 2rem;
+
+  @include md{
+    padding: 15% 10% 0;
+  }
+}
+
+.sectionp2{
+  padding: 2rem 2rem;
+
+  @include md{
+    padding: 5% 10% 0;
+  }
+}
+
+.sectionv2{
+  padding: 2rem 0 2rem;
+
+  @include md{
+    padding: 5% 0 0;
+  }
+}
+
+.sectionp_first{
+  padding: 2rem 2rem 2rem;
+
+  @include md{
+    padding: 5% 10% 10%;
+  }
+}
+
+.sectionv{
+  padding: 2rem 0 4rem;
+
+  @include md{
+    padding: 10% 0 5%;
+  }
+}
+
+.sectionv_end{
+  padding: 4rem 0 5rem;
+
+  @include md{
+    padding: 10% 0 10%;
+  }
+}
+
+.sectionv_first{
+  padding: 0 0 5rem;
+
+  @include md{
+    padding: 0 0 10%;
+  }
+}
+
+.sectionp_end{
+  padding: 4rem 2rem 5rem;
+
+  @include md{
+    padding: 7% 10% 7%;
+  }
+}
+
+.textGroup{
+  display: grid;
+
+  @include lg{
+    grid-template-columns: 50% 50%;
+    grid-gap: 2rem;
+  }
+}
+
+.twoCol{
+  display: grid;
+  row-gap: 2rem;
+
+
+  @include lg{
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+.threeCol{
+  display: grid;
+  row-gap: 2rem;
+
+
+  @include lg{
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+.oneTwo{
+  display: grid;
+  row-gap: 2rem;
+
+
+  @include lg{
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+}
+
+.twoOne{
+  display: grid;
+  row-gap: 2rem;
+
+  @include lg{
+    grid-template-columns: 2fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+.col2{
+  @include lg{
+    grid-column-start: 2;
+  }
+}
+
+.colGap4{
+  column-gap: 4rem;
+}
+
+picture{
+  width: 100%;
+
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+.textCenter{
+  text-align: center;
+}

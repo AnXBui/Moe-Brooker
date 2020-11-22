@@ -1,0 +1,49 @@
+/* =============
+    Header
+============= */
+.mainNav {
+  position: fixed;
+  height: 4.5rem;
+  width: 100%;
+  padding: 1rem 1rem;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+
+  @include md{
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    img {
+      height: 2rem;
+    }
+  }
+
+  .menuButton {
+    height: 50%;
+    width: 2rem;
+    background-color: transparent;
+    border: 0;
+
+    @include md{
+      width: 2.75rem;
+
+    }
+  }
+
+  .mainLogo{
+    text-align: center;
+    h1{
+      font-size: 0.8rem;
+
+      @include sm{
+        font-size: 1rem;
+      }
+
+      @include md{
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

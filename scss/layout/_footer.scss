@@ -1,0 +1,22 @@
+/* =============
+    Footer
+============= */
+
+footer{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 1rem 1rem;
+
+
+  @include md{
+    // padding: 2rem 10% 2rem;
+  }
+
+  .newsButton{
+    position: absolute;
+    right: 1rem;
+  }
+}
