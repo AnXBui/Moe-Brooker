@@ -1,4 +1,6 @@
 
+	const cursor = document.querySelector('.customCursor');
+
 	const getMousePos = (e) => {
         let posx = 0;
         let posy = 0;
@@ -80,6 +82,8 @@
                     x: '0%',
                     y: '0%'
                 }, 'begin');
+
+								gsap.to(cursor,0.25,{scaleX:0, scaleY:0});
             }
             hideImage() {
                 gsap.killTweensOf(this.DOM.revealInner);
@@ -110,6 +114,8 @@
                     x: '-100%',
                     y: '-100%'
                 }, 'begin');
+								gsap.to(cursor,0.25,{scaleX:1, scaleY:1});
+
             }
         }
 
@@ -139,3 +145,17 @@ class HomeLink{
 }
 
 [...document.querySelectorAll('.homeLink')].forEach(link => new HomeLink(link));
+
+function cursorInit(){
+	console.log('run');
+
+	document.addEventListener("mousemove", e => {
+		const mousePos = getMousePos(e);
+		console.log(mousePos.x,mousePos.y);
+		gsap.to(cursor,0.15,{x:mousePos.x , y:mousePos.y});
+	});
+
+	// document.querySelectorAll('a[data-curosr="0"]').addEventListener
+}
+
+cursorInit();
